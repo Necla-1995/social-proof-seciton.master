@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+:root{
+--Very-Dark-Magenta: hsl(300, 43%, 22%);
+--Soft-Pink: hsl(333, 80%, 67%);
+--Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+--Light-Grayish-Magenta: hsl(300, 24%, 96%);
+--White: hsl(0, 0%, 100%);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'League Spartan', sans-serif;
+    font-size: 15px;
+}
+#title{
+    color: var(--Very-Dark-Magenta);
+    margin-bottom: 1.5rem;
+}
+#para{
+    color: var(--Dark-Grayish-Magenta);
+    font-size: 1.2rem;
+    line-height: 1.2;
+}
+/*general rate section*/
+.img img{
+    padding-right: .2rem;
+}
+.stars{
+    background-color: var(--Light-Grayish-Magenta);
+    margin-bottom: 1rem;
+    border-radius: .5rem;
+}
+
+
+.stars p{
+    color: var(--Very-Dark-Magenta);
+    font-weight: 700;
+}
+
+/*general comments section*/
+.profile{
+    background-color: var(--Very-Dark-Magenta);
+    color: var(--White);
+    border-radius: .5rem;
+}
+.profile img{
+    border-radius: 50%;
+    width: 4em;
+    margin-right: 1.5rem;
+}
+.person{
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+}
+.person h3{
+    color: var(--Soft-Pink);
+    font-weight: 500;
+    margin-top: .5rem;
+}
+.comment{
+    line-height: 1.2;
+    padding: 0 1rem 2rem 1rem;
+}
+
+/*desktop responsive design*/
+@media only screen and (min-width:601px){
+    body{
+        background: url(/images/bg-pattern-bottom-desktop.svg), url(/images/bg-pattern-top-desktop.svg);
+        background-repeat: no-repeat;
+        padding: 5rem 10rem;
+
+    }
+    #title{
+        font-size: 3.5rem;
+        margin-bottom: 1.5rem;
+    }
+    article{
+        display: grid;
+        grid-template-columns: 4fr 5fr;
+        margin-bottom: 5rem;
+    }
+    /*desktop rate section*/
+    .rate{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .stars{
+        width: 80%;
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+    .star-1{
+        left: 4rem;
+    }
+    .star-2{
+        left: 8rem;
+    }
+    .star-3{
+        left: 12rem;
+    }
+    .img{
+        margin-right: 1.5rem;
+    }
+
+    /*destop comments section*/
+    
+    .comments{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+    .profile-2{
+        position: relative;
+        top:1rem
+    }
+    .profile-3{
+        position: relative;
+        top:2rem;
+    }
+    
+}
+
+/*mobile responsive design*/
+@media only screen and (max-width:600px){
+    body{
+        background: url(/images/bg-pattern-bottom-mobile.svg), url(/images/bg-pattern-top-desktop.svg);
+        background-repeat: no-repeat;
+        padding: 4rem 2rem;
+    }
+    .intro{
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+    #title{
+        font-size: 3rem;
+    }
+
+    /*mobile rate section*/
+    .rate{
+        margin-bottom: 2.5rem;
+    }
+    .stars{
+        text-align: center;
+        padding: 1rem;
+    }
+    .img{
+        margin-bottom: .5rem;
+    }
+
+    /*mobile comment section*/
+    .profile{
+        margin-bottom: 1rem;
+    }
+}
